@@ -1,0 +1,41 @@
+<div id="mainmenu">
+    <div class="main">
+        <a href="/" class="logo_wr logo" >ГранВудСтрой <img src="/assets/img/logo.png" alt="logo"></a>
+    <!-- Десктоп меню -->
+        [[!pdoMenu?
+            &level=`0`
+            &parents=`0`
+            &firstClass=`0`
+            &lastClass=`0`
+            &parentClass=`parent`
+            &levelClass=`menu-level-`
+            &tplOuter = `@INLINE <ul class="desktop-mainmenu">[[+wrapper]]</ul>`
+            &tplInner=`@INLINE <ul class="submenu">[[+wrapper]]</ul>`
+            &tpl=`@INLINE <li class="[[+classnames]] id[[+id]]"><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+            &tplParentRow=`@INLINE <li class="[[+classnames]] id[[+id]]"><a href="[[~[[*id]]]]#!" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+        ]]
+        <div class="tels"><a href="tel:+375296360234" class="phone">+375 (29) 636-02-34</a></div>
+        <!-- Мобильное меню -->
+        <div class="mobile-mainmenu-outer">
+            <div class="mobile-mainmenu-close"><img src="assets/img/icons/cross.svg" alt=""></div>
+            <div class="mobile-mainmenu-topBlock">
+                <a href="/" class="logo_m" >ГранВудСтрой <img src="/assets/img/logo.png"  alt="logo" /></a>
+                <div class="tel_m">
+        	        <a href="tel:+375296360234">+375 (29) 636-02-34</a>
+        	    </div>
+            </div>
+            [[!pdoMenu?
+                &level=`0`
+                &parents=`0`
+                &firstClass=`0`
+                &lastClass=`0`
+                &parentClass=`parent`
+                &levelClass=`modile-menu-level-`
+                &tplOuter = `@INLINE <ul class="mobile-mainmenu">[[+wrapper]]</ul>`
+                &tplInner=`@INLINE <ul class="mobile-submenu" style="display:none">[[+wrapper]]</ul>`
+                &tpl=`@INLINE <li class="[[+classnames]] id[[+id]]"><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+                &tplParentRow=`@INLINE <li class="[[+classnames]] id[[+id]]"><a href="" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+            ]]
+        </div>
+    </div>
+</div>

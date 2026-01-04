@@ -1,0 +1,77 @@
+<div class="modalwrapper modalwrapper_1 callback-litebox">
+    <div class="fon_modal fon_modal_1"></div>
+    <div id="modal_1" class="modal" style="display: none;">
+        <div class="close_modal close_modal_1">✕</div>
+        <h3>{{ include.modalHeader }}</h3>
+        <p class="comment">
+            {{ include.modalComment }}
+        </p>
+        <form
+            class="ajax_form"
+            action="https://kungconsulting.com/api/phone-ticket/"
+            method="post"
+        >
+            <div class="flex fm5">
+                <div class="block100">
+                    <input
+                        type="text"
+                        name="user_name"
+                        placeholder="{{ include.placeholderUserName }}"
+                    />
+                </div>
+                <div class="block100">
+                    <input
+                        type="text"
+                        name="user_phone"
+                        placeholder="{{ include.placeholderUserPhone }}"
+                    />
+                </div>
+                <div class="block100">
+                    <input
+                        type="text"
+                        name="user_email"
+                        placeholder="{{ include.placeholderUserEmail }}"
+                    />
+                </div>
+                <div class="block100">
+                    <textarea
+                        rows="3"
+                        name="message"
+                        placeholder="{{ include.placeholderMessage }}"
+                    ></textarea>
+                </div>
+                <div class="block100">
+                    <button
+                        type="submit"
+                        class="bigbutton submit"
+                    >
+                        <span>{{ include.textSendButton }}</span>
+                    </button>
+                </div>
+            </div>
+            <input
+                type="text"
+                name="org"
+                value=""
+                class="_org"
+                style="visibility:hidden; height: 0; min-height: 0; width: 0; padding: 0; border:none;margin:0"
+            />
+            <input
+                type="hidden"
+                name="location"
+                id="modal_input_location"
+            />
+            <script>
+                try {
+                    const INPUT = document.getElementById('modal_input_location');
+                    if (INPUT) {
+                        INPUT.value = window.location.href;
+                    }
+                }
+                catch(exception) {
+                    console.error(exception);
+                }
+            </script>
+        </form>
+    </div>
+</div>

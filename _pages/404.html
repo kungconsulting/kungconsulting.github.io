@@ -1,0 +1,141 @@
+---
+# empty
+---
+
+{% include globalStart.html %}
+
+<div id="content" class="mb30 s-mb20">
+  <div class="main">
+    <div style="padding-top: 43px;"></div>
+    <!--
+    <div class="s-dn">
+      <ul class="breadcrumb " itemscope="" itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/index">
+            <span itemprop="name">Русский</span>
+          </a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="divider">→</li>
+        <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+          <span itemprop="name">404</span>
+          <meta itemprop="position" content="2">
+        </li>
+      </ul>
+    </div>
+    -->
+    <h1>404</h1>
+    <div class="flex error ">
+      <div class="block40 block block1">
+        <svg width="100%" height="500px" viewBox="0 0 837 1045" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <path d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z"
+              id="Polygon-1" stroke="var(--maincolor2)" stroke-width="6" sketch:type="MSShapeGroup"></path>
+            <path d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z"
+              id="Polygon-2" stroke="var(--maincolor)" stroke-width="6" sketch:type="MSShapeGroup"></path>
+            <path d="M773,186 L827,217.538705 L827,279.636651 L773,310 L719,279.636651 L719,217.538705 L773,186 Z"
+              id="Polygon-3" stroke="var(--maincolor)" stroke-width="6" sketch:type="MSShapeGroup"></path>
+            <path d="M639,529 L773,607.846761 L773,763.091627 L639,839 L505,763.091627 L505,607.846761 L639,529 Z"
+              id="Polygon-4" stroke="var(--maincolor2)" stroke-width="6" sketch:type="MSShapeGroup"></path>
+
+          </g>
+        </svg>
+      </div>
+      <div class="block60 block block2">
+        <div class="message-box">
+          <h2>Что-то пошло не так...</h2>
+          <p>Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели адрес страницы, которая уже не
+            существует.</p>
+          <p>Скорее всего, это случилось по одной из следующих причин:</p>
+          <ul>
+            <li>Страница удалена (из-за утраты актуальности информации);</li>
+            <li>Страница перенесена в другое место;</li>
+            <li>Возможно, при вводе адреса была пропущена какая-то буква (на самом деле, у нас самих так часто
+              получается);</li>
+            <li>Вам просто нравится изучать 404 страницы.</li>
+          </ul>
+          <p>Ничего страшного, чтобы продолжить работу Вы можете:</p>
+          <a class="bigbutton" href="/"><img src="/stories/home.svg" alt="">Перейти на главную</a>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .message-box h1 {
+        font-size: 60px;
+        line-height: 46px;
+        margin-bottom: 40px;
+      }
+
+      .buttons-con .action-link-wrap {
+        margin-top: 40px;
+      }
+
+      .buttons-con .action-link-wrap a {
+        background: #68c950;
+        padding: 8px 25px;
+        border-radius: 4px;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.3s linear;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 10px
+      }
+
+      .buttons-con .action-link-wrap a:hover {
+        background: #5A5C6C;
+        color: #fff;
+      }
+
+      #Polygon-1,
+      #Polygon-2,
+      #Polygon-3,
+      #Polygon-4,
+      #Polygon-4,
+      #Polygon-5 {
+        animation: float 1s infinite ease-in-out alternate;
+      }
+
+      #Polygon-2 {
+        animation-delay: .2s;
+      }
+
+      #Polygon-3 {
+        animation-delay: .4s;
+      }
+
+      #Polygon-4 {
+        animation-delay: .6s;
+      }
+
+      #Polygon-5 {
+        animation-delay: .8s;
+      }
+
+      @keyframes float {
+        100% {
+          transform: translateY(20px);
+        }
+      }
+
+      @media all and (max-width: 768px) {
+        .error .block {
+          flex-basis: 100%;
+          margin: 1%;
+        }
+
+        .error .block1 {
+          text-align: center;
+        }
+
+        .error .block1 svg {
+          width: 150px;
+          height: 190px;
+        }
+      }
+    </style>
+  </div>
+</div>
