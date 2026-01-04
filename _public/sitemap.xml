@@ -16,13 +16,13 @@
 </url>
 {% endfor%}
 
-{% for element in site.pages %}
+{% for element in site.pages %}{% if element.SITEMAP_hide != 'true' %}
 <url>
   <loc>{{ site.data.env.site_url }}{{ element.url | remove:'index' }}</loc>
   <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
   <changefreq>{{ element.SITEMAP_changefreq }}</changefreq>
   <priority>{{ element.SITEMAP_priority }}</priority>
 </url>
-{% endfor%}
+{% endif %}{% endfor%}
 
 </urlset>
