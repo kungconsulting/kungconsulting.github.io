@@ -4,9 +4,9 @@ collections:
   public:
     output: true
     permalink: /:path
-  # favicons:
-    # output: true
-    # permalink: /:path
+  favicons:
+    output: true
+    permalink: /:path
   pages:
     output: true
     permalink: /:path
