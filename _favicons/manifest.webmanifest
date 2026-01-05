@@ -53,6 +53,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "{{ site.data.env.site_url }}",
+    "start_url": "{{ site.data.env.site_url }}/",
     "display": "standalone"
 }

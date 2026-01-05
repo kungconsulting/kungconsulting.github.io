@@ -50,28 +50,10 @@
                 </div>
             </div>
             <input
-                type="text"
-                name="org"
-                value=""
-                class="_org"
-                style="visibility:hidden; height: 0; min-height: 0; width: 0; padding: 0; border:none;margin:0"
-            />
-            <input
                 type="hidden"
                 name="location"
-                id="modal_input_location"
+                value="{{ site.data.env.site_url }}{{ page.url | remove:'index' }}"
             />
-            <script>
-                try {
-                    const INPUT = document.getElementById('modal_input_location');
-                    if (INPUT) {
-                        INPUT.value = window.location.href;
-                    }
-                }
-                catch(exception) {
-                    console.error(exception);
-                }
-            </script>
         </form>
     </div>
 </div>

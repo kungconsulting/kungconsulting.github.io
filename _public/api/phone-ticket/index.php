@@ -85,10 +85,18 @@ try {
                     </tr>
                     <tr>
                         <td style="<?= $td_style ?>">
-                            <b>Откуда:</b>
+                            <b>Имя формы:</b>
                         </td>
                         <td style="<?= $td_style ?>">
                             <?= $data['location'] ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="<?= $td_style ?>">
+                            <b>Дата и время отправки:</b>
+                        </td>
+                        <td style="<?= $td_style ?>">
+                            <?= $data['datetime'] ?>
                         </td>
                     </tr>
                     <tr>
@@ -97,6 +105,14 @@ try {
                         </td>
                         <td style="<?= $td_style ?>">
                             <?= $data['ip'] ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="<?= $td_style ?>">
+                            <b>HTTP REFERER:</b>
+                        </td>
+                        <td style="<?= $td_style ?>">
+                            <?= $data['http_referer'] ?>
                         </td>
                     </tr>
                     <tr>
@@ -138,13 +154,25 @@ try {
 
 <code><?= $data['message']  ?></code>
 
-<b>Откуда</b>:
+<b>Имя формы</b>:
 
 <code><?= $data['location']  ?></code>
+
+<b>Дата и время отправки</b>:
+
+<code><?= $data['datetime']  ?></code>
 
 <b>IP</b>:
 
 <code><?= $data['ip']  ?></code>
+
+<b>HTTP REFERER</b>:
+
+<code><?= $data['http_referer']  ?></code>
+
+<b>User agent</b>:
+
+<code><?= $data['agent']  ?></code>
 
             <?php
 
@@ -159,9 +187,9 @@ try {
                 'phone' => htmlspecialchars(isset($_POST['user_phone']) ? $_POST['user_phone'] : "не указано"),
                 'email' => htmlspecialchars(isset($_POST['user_email']) ? $_POST['user_email'] : "не указано"),
                 'message' => htmlspecialchars(isset($_POST['message']) ? $_POST['message'] : "не указано"),
+                'org' => htmlspecialchars(isset($_POST['org']) ? $_POST['org'] : "не указано"),
                 'location' => htmlspecialchars(isset($_POST['location']) ? $_POST['location'] : "не указано"),
-                // 'uri' => $_SERVER['REQUEST_URI'],
-                'referer' => $_SERVER['HTTP_REFERER'],
+                'http_referer' => $_SERVER['HTTP_REFERER'],
                 'ip' => implode(
                     ",",
                     array_filter(
@@ -227,8 +255,10 @@ try {
                             phone TEXT,
                             email TEXT,
                             message TEXT,
-                            location TEXT,
+                            org TEXT,
                             ip TEXT,
+                            location TEXT,
+                            http_referer TEXT,
                             agent TEXT
                         )
                         ";
@@ -243,8 +273,10 @@ try {
                                 phone,
                                 email,
                                 message,
+                                org,
                                 location,
                                 ip,
+                                http_referer,
                                 agent
                             )
                         VALUES
@@ -254,8 +286,10 @@ try {
                                 :phone,
                                 :email,
                                 :message,
+                                :org,
                                 :location,
                                 :ip,
+                                :http_referer,
                                 :agent
                             )
                         ";
@@ -267,8 +301,10 @@ try {
                     ':phone' => $data['phone'],
                     ':email' => $data['email'],
                     ':message' => $data['message'],
+                    ':org' => $data['org'],
                     ':location' => $data['location'],
                     ':ip' => $data['ip'],
+                    ':http_referer' => $data['http_referer'],
                     ':agent' => $data['agent'],
                 ]);
             }
